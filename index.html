@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+
+  <meta name="description" content="Network Engineer Portfolio - CCNA Certified Engineer specialized in Cisco Networking, Security and Infrastructure Design">
+  <meta name="keywords" content="Network Engineer, CCNA, Cisco Networking, Routing and Switching, Network Security, TCP/IP, OSPF, VLAN, Troubleshooting, Network Infrastructure, IT Support,">
+  <meta name="author" content="Sherif Rajeh">
+
+  <title>Sherif Rajeh | Network Engineer Portfolio</title>
+  
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <style>
+    body {
+      background-color: #121212;
+     color: white;
+     font-family: 'Roboto', sans-serif;
+     padding-top: 80px;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+ 
+   .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+   }
+
+    .navbar-brand {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #e0b100;
+      position: relative;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .navbar-brand::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 100%;
+      height: 3px;
+      background-color: #e0b100;
+      transform: scaleX(0);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar-brand:hover::after {
+      transform: scaleX(1);
+    }
+
+    .nav-link {
+      font-size: 1.2rem;
+      color: #ffffff;
+      position: relative;
+      transition: color 0.3s ease-in-out;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: -5px;
+      width: 0;
+      height: 3px;
+      background-color: #e0b100;
+      transition: all 0.3s ease-in-out;
+      transform: translateX(-50%);
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .nav-link:hover {
+      color: #e0b100;
+    }
+
+    /* Custom Toggle Button */
+    .navbar-toggler {
+      border: none;
+      outline: none;
+      box-shadow: none;
+      padding: 0.5rem;
+      position: relative;
+      width: 50px;
+      height: 40px;
+    }
+
+    .navbar-toggler-icon {
+      background-image: none;
+      position: absolute;
+      width: 24px;
+      height: 2px;
+      background-color: #e0b100;
+      transition: all 0.3s ease-in-out;
+      top: 50%;
+      left: 30%;
+      transform: translate(-50%, -50%);
+    }
+
+    .navbar-toggler-icon::before,
+    .navbar-toggler-icon::after {
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 2px;
+      background-color: #e0b100;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .navbar-toggler-icon::before {
+      transform: translateY(-8px);
+    }
+
+    .navbar-toggler-icon::after {
+      transform: translateY(8px);
+    }
+
+    /* Toggle Button Open State */
+    .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+      background-color: transparent;
+    }
+
+    .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+      transform: rotate(45deg);
+    }
+
+    .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+      transform: rotate(-45deg);
+    }
+
+    /* Section Styling */
+    section {
+      padding: 100px 0;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 50px;
+      color: #e0b100;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .card {
+      background-color: #1a1a1a;
+      border: 1px solid #333;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      height: 100%;
+      /* Ensure all cards have the same height */
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(255, 193, 7, 0.2);
+    }
+
+    .card-title {
+      color: #e0b100;
+    }
+
+    .card-text {
+      color: #ccc;
+    }
+
+    .btn-primary {
+      background-color: #e0b100;
+      border: none;
+      color: #121212;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .btn-primary:hover {
+      background-color: #e0a800;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      background-color: #1a1a1a;
+      border: 1px solid #333;
+      color: white;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+      /* white with some transparency */
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      background-color: #1a1a1a;
+      border-color: #e0b100;
+      box-shadow: none;
+      color: white;
+    }
+
+    /* Animations */
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Glowing Effect */
+    .glow {
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      0% {
+        box-shadow: 0 0 10px rgba(255, 193, 7, 0.6);
+      }
+
+      100% {
+        box-shadow: 0 0 20px rgba(255, 193, 7, 0.8);
+      }
+    }
+
+    /* Background Animation */
+    .animated-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: linear-gradient(45deg, #121212, #1a1a1a, #121212);
+      background-size: 400% 400%;
+      animation: gradientBG 10s ease infinite;
+    }
+
+    @keyframes gradientBG {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    /* Profile Picture */
+    .profile-picture {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      border: 5px solid #e0b100;
+      object-fit: cover;
+      margin: 0 auto;
+      display: block;
+    }
+
+    /* Social Media Icons */
+   .social-icons {
+     height: var(--social-height);
+     position: fixed;
+      top: 0;
+      width: 100%;
+     z-index: 1000;
+    }
+
+   
+    .hover-bg:hover { background-color: rgba(255,193,7,0.1) !important; }
+    @keyframes float {
+   0%, 100% { transform: translateY(0px); }
+   50% { transform: translateY(-10px); }
+   }
+
+   @media (max-width: 768px) {
+    .navbar-brand {
+     font-size: 1.3rem;
+    }
+   } 
+
+  </style>
+</head>
+
+<body>
+  <!-- Background Animation -->
+  <div class="animated-background"></div>
+
+
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black shadow-lg fixed-top" >
+    <div class="container">
+      <a href="#" class="navbar-brand fw-bold text-warning">
+         SHERIF RAJEH
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a href="#about" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#skills" class="nav-link">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a href="#certifications" class="nav-link">Certifications</a>
+          </li>
+          <li class="nav-item">
+            <a href="#projects" class="nav-link">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<!-- About / Showcase Section -->
+<section id="about" class="text-center text-sm-start">
+  <div class="container">
+    <div class="d-sm-flex align-items-center justify-content-between gap-5">
+
+      <!-- Text Content -->
+      <div class="animate-on-scroll">
+
+        <h1 class="text-warning fw-bold">
+          Junior Network Engineer
+        </h1>
+
+        <h2 class="text-warning mb-3">
+          Design. Secure. Troubleshoot.
+        </h2>
+
+        <p class="lead text-light opacity-75 mb-4">
+          Hi, I'm <span class="text-warning fw-bold">Sherif Rajeh</span>, a CCNA-certified Network Engineer
+          with hands-on experience in designing, configuring, and troubleshooting enterprise networks.
+        </p>
+
+        <p class="text-light opacity-75 mb-3">
+          Skilled in Cisco routing and switching technologies including VLANs, OSPF, ACLs, NAT, and DHCP,
+          with a strong focus on network security and performance optimization.
+        </p>
+
+        <p class="text-light opacity-75 mb-3">
+          Experienced with Windows Server, Active Directory, VPNs, and VoIP systems using Cisco Packet Tracer
+          and real lab environments.
+        </p>
+
+        <p class="text-light opacity-75 mb-4">
+          Currently developing toward CCNP-level expertise and seeking opportunities in enterprise networking
+          environments where I can contribute and grow as a professional engineer.
+        </p>
+
+        <!-- Buttons -->
+        <div class="d-flex flex-column flex-sm-row gap-3">
+
+          <button class="btn btn-primary btn-lg glow" data-bs-toggle="modal" data-bs-target="#hireModal">
+            Hire Me
+          </button>
+
+          <a href="./sherif.docx"
+             download="Sherif_Rajeh_CV.docx"
+             class="btn btn-outline-warning btn-lg glow">
+            <i class="bi bi-file-earmark-person me-2"></i>
+            Download CV
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- Profile Image -->
+      <div class="animate-on-scroll text-center">
+        <img src="sherif.jpg"
+             alt="Sherif Rajeh - Network Engineer"
+             class="profile-picture">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  
+<!-- Hire Me Modal --><div class="modal fade" id="hireModal" tabindex="-1" aria-labelledby="hireModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content bg-dark text-white">
+
+      <!-- HEADER -->
+      <div class="modal-header">
+        <h5 class="modal-title text-warning" id="hireModalLabel">
+          Job Request Form
+        </h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- FORM -->
+      <form id="hireForm"
+            class="contact-form animate-on-scroll"
+            action="https://formsubmit.co/sherif.rajeh@gmail.com"
+            method="POST">
+
+        <!-- تعطيل الكابتشا -->
+        <input type="hidden" name="_captcha" value="false">
+
+        <!-- BODY -->
+        <div class="modal-body">
+
+          <!-- FORM FIELDS -->
+          <div id="hireFormFields">
+
+            <div class="mb-3">
+              <label class="form-label">Your Company | Name</label>
+              <input type="text"
+                     class="form-control text-white"
+                     name="name"
+                     style="background-color:#1a1a1a;"
+                     required>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Email Address</label>
+              <input type="email"
+                     class="form-control text-white"
+                     name="email"
+                     style="background-color:#1a1a1a;"
+                     required>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Job Description</label>
+              <textarea class="form-control text-white"
+                        name="message"
+                        rows="4"
+                        placeholder="Describe the job..."
+                        style="background-color:#1a1a1a;"
+                        required></textarea>
+            </div>
+
+          </div>
+
+          <!-- SUCCESS MESSAGE -->
+          <div id="hireSuccessMessage" class="text-center p-4" style="display:none;">
+            <i class="fas fa-check-circle text-success mb-3" style="font-size:3rem;"></i>
+            <h4 class="text-success mb-3">Thank you!</h4>
+            <p class="mb-0">
+              Your request has been received successfully. I will contact you soon.
+            </p>
+
+            <button type="button"
+                    class="btn btn-warning mt-3"
+                    onclick="resetHireForm()">
+              Send Another Request
+            </button>
+          </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-warning w-100" id="hireSubmitBtn">
+            Send Request
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<section id="skills" class="bg-dark">
+  <div class="container">
+    <h2 class="section-title text-center">Technical Skills</h2>
+    <div class="row g-4">
+
+      <!-- Routing & Switching -->
+      <div class="col-md-4">
+        <div class="card text-center p-4 animate-on-scroll h-100">
+          <i class="bi bi-router text-warning display-4 mb-3"></i>
+          <h3 class="card-title">Routing & Switching</h3>
+          <p class="card-text">
+            Hands-on experience with Cisco IOS configuration including VLANs, Inter-VLAN Routing (SVI), OSPF, EIGRP, HSRP redundancy, and STP optimization (RSTP & PortFast). Strong understanding of Layer 2 and Layer 3 network design, implementation, and troubleshooting in enterprise environments.
+          </p>
+        </div>
+      </div>
+
+      <!-- Network Security -->
+      <div class="col-md-4">
+        <div class="card text-center p-4 animate-on-scroll h-100">
+          <i class="bi bi-shield-lock text-warning display-4 mb-3"></i>
+          <h3 class="card-title">Network Security</h3>
+          <p class="card-text">
+            Experience implementing secure network infrastructures using ACLs, NAT (Static, Dynamic, PAT), IPsec VPNs, and FortiGate firewall basics. Strong knowledge of Layer 2 security features including Port Security, DHCP Snooping, and Dynamic ARP Inspection (DAI).
+          </p>
+        </div>
+      </div>
+
+      <!-- Systems & Infrastructure -->
+      <div class="col-md-4">
+        <div class="card text-center p-4 animate-on-scroll h-100">
+          <i class="bi bi-hdd-network text-warning display-4 mb-3"></i>
+          <h3 class="card-title">Systems & Infrastructure</h3>
+          <p class="card-text">
+            Experience with Windows Server administration, Active Directory, DHCP, DNS, and enterprise IT infrastructure. Familiar with VoIP systems (Cisco CME), Wireless LAN Controllers (WLC), and integration of network services in enterprise environments.
+          </p>
+        </div>
+      </div>
+
+      <!-- Cloud (Azure) -->
+      <div class="col-md-4">
+        <div class="card text-center p-4 animate-on-scroll h-100">
+          <i class="bi bi-cloud text-warning display-4 mb-3"></i>
+          <h3 class="card-title">Cloud Fundamentals (Azure)</h3>
+          <p class="card-text">
+            Microsoft Azure Fundamentals knowledge (AZ-900 level) including Virtual Networks (VNets), Subnets, Network Security Groups (NSG), Virtual Machines, and basic cloud networking concepts. Understanding of hybrid infrastructure and cloud-based connectivity models.
+          </p>
+        </div>
+      </div>
+
+      <!-- Automation & Scripting -->
+      <div class="col-md-4">
+        <div class="card text-center p-4 animate-on-scroll h-100">
+          <i class="bi bi-terminal text-warning display-4 mb-3"></i>
+          <h3 class="card-title">Network Automation & Scripting</h3>
+          <p class="card-text">
+            Practical experience with Python for basic network automation tasks and lab simulations. Familiar with APIs and REST concepts. Hands-on Cisco Packet Tracer controller-based labs with automation logic for configuration and network task optimization.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- Soft Skills Section -->
+<section id="soft-skills" class="bg-dark">
+  <div class="container">
+    <h2 class="section-title text-center">Soft Skills</h2>
+
+    <div class="row g-4">
+
+      <!-- Problem Solving -->
+      <div class="col-md-3">
+        <div class="card text-center p-4 animate-on-scroll h-100">
+          <i class="bi bi-lightbulb text-warning display-5 mb-3"></i>
+          <h5 class="card-title">Problem Solving</h5>
+          <p class="card-text">
+            Strong ability to analyze network issues, identify root causes, and implement efficient solutions in real-world scenarios.
+          </p>
+        </div>
+      </div>
+
+      <!-- Troubleshooting -->
+      <div class="col-md-3">
+        <div class="card text-center p-4 animate-on-scroll h-100">
+          <i class="bi bi-tools text-warning display-5 mb-3"></i>
+          <h5 class="card-title">Troubleshooting Mindset</h5>
+          <p class="card-text">
+            Systematic approach to diagnosing and resolving network, connectivity, and configuration issues under pressure.
+          </p>
+        </div>
+      </div>
+
+      <!-- Teamwork -->
+      <div class="col-md-3">
+        <div class="card text-center p-4 animate-on-scroll h-100">
+          <i class="bi bi-people text-warning display-5 mb-3"></i>
+          <h5 class="card-title">Teamwork</h5>
+          <p class="card-text">
+            Effective collaboration with team members in lab environments and group projects to achieve shared technical goals.
+          </p>
+        </div>
+      </div>
+
+      <!-- Leadership -->
+      <div class="col-md-3">
+        <div class="card text-center p-4 animate-on-scroll h-100">
+          <i class="bi bi-person-badge text-warning display-5 mb-3"></i>
+          <h5 class="card-title">Leadership</h5>
+          <p class="card-text">
+            Ability to take initiative, guide team members, and manage tasks efficiently in technical environments and lab setups.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- Certifications Section -->
+<section id="certifications">
+  <div class="container">
+    <h2 class="section-title text-center">Certifications</h2>
+ <div class="row g-4">
+
+  <!-- CORE (Most Important) -->
+  <div class="col-md-4">
+    <div class="card text-center p-4 animate-on-scroll h-100">
+      <i class="bi bi-award-fill text-warning display-4 mb-3"></i>
+      <h3 class="card-title">CCNA: Switching, Routing & Wireless Essentials</h3>
+      <p class="card-text">Cisco Networking Academy</p>
+    </div>
+  </div>
+
+  <!-- SECURITY PATH -->
+  <div class="col-md-4">
+    <div class="card text-center p-4 animate-on-scroll h-100">
+      <i class="bi bi-shield-lock-fill text-warning display-4 mb-3"></i>
+      <h3 class="card-title">Junior Cybersecurity Analyst Path</h3>
+      <p class="card-text">Cisco Networking Academy</p>
+    </div>
+  </div>
+
+  <!-- NETWORK FUNDAMENTALS -->
+  <div class="col-md-4">
+    <div class="card text-center p-4 animate-on-scroll h-100">
+      <i class="bi bi-diagram-3-fill text-warning display-4 mb-3"></i>
+      <h3 class="card-title">Network Technician Career Path</h3>
+      <p class="card-text">Cisco Networking Academy</p>
+    </div>
+  </div>
+
+  <!-- BASICS -->
+  <div class="col-md-4">
+    <div class="card text-center p-4 animate-on-scroll h-100">
+      <i class="bi bi-pc-display text-warning display-4 mb-3"></i>
+      <h3 class="card-title">IT & Cybersecurity Fundamentals</h3>
+      <p class="card-text">IBM SkillsBuild</p>
+    </div>
+  </div>
+
+  <!-- NETWORK BASICS -->
+  <div class="col-md-4">
+    <div class="card text-center p-4 animate-on-scroll h-100">
+      <i class="bi bi-diagram-2-fill text-warning display-4 mb-3"></i>
+      <h3 class="card-title">Networking Basics</h3>
+      <p class="card-text">Cisco Networking Academy</p>
+    </div>
+  </div>
+
+  <!-- HARDWARE -->
+  <div class="col-md-4">
+    <div class="card text-center p-4 animate-on-scroll h-100">
+      <i class="bi bi-cpu-fill text-warning display-4 mb-3"></i>
+      <h3 class="card-title">Computer Hardware Basics</h3>
+      <p class="card-text">Cisco Networking Academy</p>
+    </div>
+  </div>
+
+ </div>
+
+    <!-- Credly Button -->
+    <div class="text-center mt-5">
+      <a href="https://www.credly.com/users/sherif-rajeh"
+         target="_blank"
+         class="btn btn-warning btn-lg glow">
+
+        <i class="bi bi-patch-check-fill me-2"></i>
+        View Verified Certifications on Credly
+
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- Projects Section --><section id="projects" class="bg-dark">
+  <div class="container">
+
+    <h2 class="section-title text-center">Projects</h2>
+
+    <div class="row g-4 justify-content-center">
+
+      <!-- ================= PROJECT 1 ================= -->
+      <div class="col-lg-6 col-md-8">
+        <div class="card p-4 animate-on-scroll h-100">
+
+          <img src="project1.jpg"
+               alt="Enterprise network topology designed using Cisco Packet Tracer showing VLANs, OSPF and ACL configuration"
+               class="img-fluid rounded mb-4"
+               style="border: 2px solid #e0b100;">
+
+          <h3 class="card-title">Enterprise Network Design</h3>
+
+          <p class="card-text">
+            Designed and implemented an enterprise network using Cisco Packet Tracer including:
+          </p>
+
+          <ul class="text-light opacity-75">
+            <li>VLAN segmentation and Inter-VLAN Routing (SVI)</li>
+            <li>OSPF dynamic routing configuration</li>
+            <li>HSRP for gateway redundancy</li>
+            <li>STP optimization (PortFast & RSTP)</li>
+            <li>ACLs, NAT, and DHCP services</li>
+            <li>SSH secure remote access setup</li>
+            <li>Port Security, DHCP Snooping, DAI</li>
+            <li>Wireless LAN Controller (WLC) & AP configuration</li>
+            <li>Syslog, NTP, and TFTP backup integration</li>
+          </ul>
+
+          <p class="text-light opacity-75">
+            Tools: Cisco Packet Tracer.
+          </p>
+
+          <div class="mt-3 d-flex flex-column gap-3">
+
+            <a href="./sherif.rar"
+               download="Sherif_Network_Project.rar"
+               class="btn btn-warning glow">
+              <i class="bi bi-download me-2"></i>
+              Download Packet Tracer File
+            </a>
+
+            <a href="./sherif.pdf"
+               download="Sherif_Network_Report.pdf"
+               class="btn btn-outline-warning glow">
+              <i class="bi bi-file-earmark-pdf me-2"></i>
+              Download Project Report 
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ================= PROJECT 2 ================= -->
+      <div class="col-lg-6 col-md-8">
+        <div class="card p-4 animate-on-scroll h-100">
+
+          <img src="nat.jpg"
+               alt="NAT Network Project"
+               class="img-fluid rounded mb-4"
+               style="border: 2px solid #e0b100;">
+
+          <h3 class="card-title">NAT Implementation & Network Address Translation Lab</h3>
+
+          <p class="card-text">
+            Designed and implemented a NAT lab using Cisco Packet Tracer to simulate real-world internet connectivity scenarios.
+          </p>
+
+          <ul class="text-light opacity-75">
+            <li>Configured Static NAT for internal servers</li>
+            <li>Configured Dynamic NAT for multiple users</li>
+            <li>Implemented PAT (Overload)</li>
+            <li>Configured ACLs for traffic control</li>
+            <li>Simulated ISP connectivity</li>
+            <li>Verified NAT translation tables</li>
+            <li>End-to-end LAN/WAN testing</li>
+          </ul>
+
+          <p class="text-light opacity-75">
+            Tools: Cisco Packet Tracer.
+          </p>
+
+          <div class="mt-3 d-flex flex-column gap-3">
+
+            <a href="./nat.rar"
+               download="NAT_Network_Project.rar"
+               class="btn btn-warning glow">
+              <i class="bi bi-download me-2"></i>
+              Download Packet Tracer File
+            </a>
+
+            <a href="./nat.docx"
+               download="NAT_Network_Report.docx"
+               class="btn btn-outline-warning glow">
+              <i class="bi bi-file-earmark-word me-2"></i>
+              Download Project Report 
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ================= PROJECT 3 (VPN IPSEC) ================= -->
+      <div class="col-lg-6 col-md-8">
+        <div class="card p-4 animate-on-scroll h-100">
+
+          <img src="vpn.jpg"
+               alt="IPsec VPN Site to Site topology"
+               class="img-fluid rounded mb-4"
+               style="border: 2px solid #e0b100;">
+
+          <h3 class="card-title">Site-to-Site IPsec VPN</h3>
+
+          <p class="card-text">
+            Designed and configured a secure Site-to-Site IPsec VPN between two remote networks.
+          </p>
+
+          <ul class="text-light opacity-75">
+            <li>Configured ISAKMP Phase 1 (AES, SHA)</li>
+            <li>Configured IPsec Phase 2 encryption</li>
+            <li>Defined ACL for interesting traffic</li>
+            <li>Built crypto maps between routers</li>
+            <li>Verified secure tunnel establishment</li>
+          </ul>
+
+          <p class="text-light opacity-75">
+            Tools: Cisco Packet Tracer.
+          </p>
+
+          <div class="mt-3 d-flex flex-column gap-3">
+
+            <a href="./vpn.rar"
+               download="VPN_Project.rar"
+               class="btn btn-warning glow">
+              <i class="bi bi-shield-lock me-2"></i>
+               Download Packet Tracer File
+            </a>
+
+            <a href="./vpn.pdf"
+               download="NAT_Network_Report.docx"
+               class="btn btn-outline-warning glow">
+              <i class="bi bi-file-earmark-pdf me-2"></i>
+              Download Project Report 
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ================= PROJECT 4 (IPv6 EIGRP) ================= -->
+      <div class="col-lg-6 col-md-8">
+        <div class="card p-4 animate-on-scroll h-100">
+
+          <img src="ipv6.jpg"
+               alt="IPv6 EIGRP routing topology"
+               class="img-fluid rounded mb-4"
+               style="border: 2px solid #e0b100;">
+
+          <h3 class="card-title">IPv6 Routing with EIGRP</h3>
+
+          <p class="card-text">
+            Implemented IPv6 network using EIGRP dynamic routing protocol across multiple routers.
+          </p>
+
+          <ul class="text-light opacity-75">
+            <li>Enabled IPv6 unicast routing</li>
+            <li>Configured EIGRP for IPv6 (AS 10)</li>
+            <li>Assigned IPv6 addressing scheme</li>
+            <li>Established neighbor relationships</li>
+            <li>Verified routing convergence</li>
+          </ul>
+
+          <p class="text-light opacity-75">
+            Tools: Cisco Packet Tracer.
+          </p>
+
+          <div class="mt-3 d-flex flex-column gap-3">
+
+            <a href="./ipv6.rar"
+               download="IPv6_EIGRP_Project.rar"
+               class="btn btn-warning glow">
+              <i class="bi bi-diagram-3 me-2"></i>
+               Download Packet Tracer File
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ================= PROJECT 5 (VOIP) ================= -->
+      <div class="col-lg-6 col-md-8">
+        <div class="card p-4 animate-on-scroll h-100">
+
+          <img src="voip.jpg"
+               alt="VoIP Cisco CME topology"
+               class="img-fluid rounded mb-4"
+               style="border: 2px solid #e0b100;">
+
+          <h3 class="card-title">VoIP Network Implementation</h3>
+
+          <p class="card-text">
+            Designed and implemented a VoIP network using Cisco Call Manager Express (CME) with VLAN segmentation.
+          </p>
+
+          <ul class="text-light opacity-75">
+            <li>Configured IP Phones using SCCP protocol</li>
+            <li>Implemented CME on Cisco router</li>
+            <li>Created separate VLANs for Voice and Data</li>
+            <li>Configured Router-on-a-Stick for inter-VLAN routing</li>
+            <li>Set up DHCP with Option 150 for IP Phone provisioning</li>
+            <li>Configured dial peers and extensions</li>
+            <li>Connected IP Phones with PCs through switch ports (voice VLAN + access VLAN)</li>
+            <li>Enabled internal voice communication between endpoints</li>
+          </ul>
+
+          <p class="text-light opacity-75">
+            Tools: Cisco Packet Tracer.
+          </p>
+
+          <div class="mt-3 d-flex flex-column gap-3">
+
+            <a href="./voip.rar"
+               download="VoIP_Project.rar"
+               class="btn btn-warning glow">
+              <i class="bi bi-telephone me-2"></i>
+               Download Packet Tracer File
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Hands-On Lab Experience Section -->
+<section id="lab" class="bg-dark">
+  <div class="container">
+    <h2 class="section-title text-center">Hands-On Lab Experience</h2>
+
+    <p class="text-center text-light opacity-75 mb-5">
+      Practical experience working with real networking equipment in training labs and educational environments.
+    </p>
+
+    <div class="row g-4">
+
+      <!-- Cisco Switch -->
+      <div class="col-md-4">
+        <div class="card p-3 animate-on-scroll h-100">
+          <img src="rack2.jpg" class="img-fluid rounded mb-3" alt="Cisco Switch Lab">
+          <h5 class="card-title">Cisco Switches and Cisco Routers and Wireless LAN Controller</h5>
+          <p class="card-text">Hands-on configuration and cabling of Cisco switches including VLAN setup and basic switching operations.</p>
+          <p class="card-text">Practical experience in routing configuration, IP addressing, and basic network troubleshooting.</p>
+         <p class="card-text">Basic configuration and understanding of centralized wireless network management.</p>
+
+        </div>
+      </div>
+
+     
+
+      <!-- IP Phone -->
+      <div class="col-md-4">
+        <div class="card p-3 animate-on-scroll h-100">
+          <img src="ipphone.jpg" class="img-fluid rounded mb-3" alt="Cisco IP Phone">
+          <h5 class="card-title">Cisco IP Phone 7942G</h5>
+          <p class="card-text">VoIP setup experience including SIP-based communication and integration with FreePBX systems.</p>
+        </div>
+      </div>
+
+     
+
+      <!-- Firewall + Rack -->
+      <div class="col-md-4">
+        <div class="card p-3 animate-on-scroll h-100">
+          <img src="rack.jpg" class="img-fluid rounded mb-3" alt="Network Rack">
+          <h5 class="card-title">Network Rack Setup</h5>
+          <p class="card-text">Real lab rack including Cisco router, FortiGate firewall, and structured cabling environment.</p>
+        </div>
+      </div>
+
+      <!-- Fiber -->
+      <div class="col-md-4">
+        <div class="card p-3 animate-on-scroll h-100">
+          <img src="fiber.jpg" class="img-fluid rounded mb-3" alt="Fiber Splicing">
+          <h5 class="card-title">Fiber Optic Cabling</h5>
+          <p class="card-text">Hands-on fiber splicing and termination between fiber and copper networks.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+   
+
+
+  
+<!-- Contact Section -->
+<section id="contact" class="bg-dark text-light py-5">
+  <div class="container">
+
+    <!-- Title -->
+    <h2 class="section-title text-center text-warning mb-5">
+      Contact Me
+    </h2>
+
+    <div class="row g-5">
+
+      <!-- ================= CONTACT FORM ================= -->
+      <div class="col-lg-7">
+
+        <form id="contactForm"
+              class="p-4 rounded-3 border border-secondary bg-black shadow-lg contact-form animate-on-scroll"
+              action="https://formsubmit.co/sherif.rajeh@gmail.com"
+              method="POST">
+
+          <!-- hidden options -->
+          <input type="hidden" name="_captcha" value="false">
+
+          <div id="contactFormFields">
+
+            <!-- Name -->
+            <div class="mb-3">
+              <label class="form-label text-warning">Full Name</label>
+              <div class="input-group">
+                <span class="input-group-text bg-dark border-secondary text-warning">
+                  <i class="fa-solid fa-user"></i>
+                </span>
+                <input type="text"
+                       name="name"
+                       class="form-control bg-dark text-white border-secondary"
+                       placeholder="Enter your name"
+                       required>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="mb-3">
+              <label class="form-label text-warning">Email Address</label>
+              <div class="input-group">
+                <span class="input-group-text bg-dark border-secondary text-warning">
+                  <i class="fa-solid fa-envelope"></i>
+                </span>
+                <input type="email"
+                       name="email"
+                       class="form-control bg-dark text-white border-secondary"
+                       placeholder="Enter your email"
+                       required>
+              </div>
+            </div>
+
+            <!-- Message -->
+            <div class="mb-3">
+              <label class="form-label text-warning">Message</label>
+              <div class="input-group">
+                <span class="input-group-text bg-dark border-secondary text-warning">
+                  <i class="fa-solid fa-message"></i>
+                </span>
+                <textarea name="message"
+                          rows="5"
+                          class="form-control bg-dark text-white border-secondary"
+                          placeholder="Write your message..."
+                          required></textarea>
+              </div>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit"
+                    class="btn btn-warning w-100 fw-bold glow mt-2">
+              <i class="fa-solid fa-paper-plane me-2"></i>
+              Send Message
+            </button>
+
+          </div>
+
+          <!-- Success Message -->
+          <div id="contactSuccessMessage" class="text-center p-4" style="display:none;">
+            <i class="fa-solid fa-circle-check text-success mb-3" style="font-size: 3rem;"></i>
+            <h4 class="text-success">Message Sent Successfully!</h4>
+            <p class="text-light opacity-75">
+              Thanks for reaching out. I will reply as soon as possible.
+            </p>
+
+            <button type="button"
+                    class="btn btn-outline-warning mt-3 w-100"
+                    onclick="resetContactForm()">
+              Send Another Message
+            </button>
+          </div>
+
+        </form>
+      </div>
+
+      <!-- ================= CONTACT INFO ================= -->
+      <div class="col-lg-5 animate-on-scroll">
+
+        <!-- Quick Help -->
+        <div class="p-4 mb-4 rounded-3 border border-warning bg-black position-relative overflow-hidden">
+
+          <div class="position-absolute top-0 start-0 w-100 h-100 opacity-25"
+               style="background: radial-gradient(circle, #ffc10733, transparent);"></div>
+
+          <div class="d-flex align-items-center gap-3 position-relative">
+
+            <div class="rounded-circle bg-warning d-flex align-items-center justify-content-center"
+                 style="width:55px;height:55px;">
+              <i class="fa-solid fa-headset text-dark fs-5"></i>
+            </div>
+
+            <div>
+              <h5 class="text-warning mb-1">Need Quick Help?</h5>
+              <p class="mb-0 small text-light opacity-75">
+                Contact me directly via WhatsApp for fast response.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Contact Cards -->
+        <div class="d-flex flex-column gap-3">
+
+          <!-- Email -->
+          <a href="mailto:sherif.rajeh@gmail.com"
+             class="d-flex align-items-center gap-3 p-3 bg-dark border border-secondary rounded-3 text-decoration-none hover-bg">
+
+            <div class="rounded-circle bg-warning d-flex align-items-center justify-content-center"
+                 style="width:45px;height:45px;">
+              <i class="fa-solid fa-envelope text-dark"></i>
+            </div>
+
+            <div>
+              <div class="text-warning small">Email</div>
+              <div class="text-white">sherif.rajeh@gmail.com</div>
+            </div>
+          </a>
+
+          <!-- WhatsApp -->
+          <a href="https://wa.me/201098995624" target="_blank"
+             class="d-flex align-items-center gap-3 p-3 bg-dark border border-secondary rounded-3 text-decoration-none hover-bg">
+
+            <div class="rounded-circle bg-success d-flex align-items-center justify-content-center"
+                 style="width:45px;height:45px;">
+              <i class="fa-brands fa-whatsapp text-white"></i>
+            </div>
+
+            <div>
+              <div class="text-warning small">WhatsApp</div>
+              <div class="text-white">01098995624</div>
+            </div>
+          </a>
+
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/sherif-rajeh" target="_blank"
+             class="d-flex align-items-center gap-3 p-3 bg-dark border border-secondary rounded-3 text-decoration-none hover-bg">
+
+            <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center"
+                 style="width:45px;height:45px;">
+              <i class="fa-brands fa-linkedin-in text-white"></i>
+            </div>
+
+            <div>
+              <div class="text-warning small">LinkedIn</div>
+              <div class="text-white">sherif-rajeh</div>
+            </div>
+          </a>
+
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/share/1NA3Pm4Vwv/" target="_blank"
+             class="d-flex align-items-center gap-3 p-3 bg-dark border border-secondary rounded-3 text-decoration-none hover-bg">
+
+            <div class="rounded-circle bg-info d-flex align-items-center justify-content-center"
+                 style="width:45px;height:45px;">
+              <i class="fa-brands fa-facebook-f text-white"></i>
+            </div>
+
+            <div>
+              <div class="text-warning small">Facebook</div>
+              <div class="text-white">Sherif Rajeh</div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+ const contactForm = document.getElementById('contactForm');
+
+ contactForm.addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const formData = new FormData(this);
+
+  fetch(this.action, {
+    method: 'POST',
+    body: formData,
+    headers: { 'Accept': 'application/json' }
+  })
+  .then(() => {
+    document.getElementById('contactFormFields').style.display = 'none';
+    document.getElementById('contactSuccessMessage').style.display = 'block';
+    
+    this.reset();
+  })
+  .catch(() => {
+    alert('Error sending message. Please try again.');
+  });
+  });
+
+  function resetContactForm() {
+  contactForm.reset();
+  document.getElementById('contactSuccessMessage').style.display = 'none';
+  document.getElementById('contactFormFields').style.display = 'block';
+ 
+ }
+ </script>
+
+ <script>
+const hireForm = document.getElementById('hireForm');
+
+hireForm.addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const formData = new FormData(this);
+
+  fetch(this.action, {
+    method: 'POST',
+    body: formData,
+    headers: { 'Accept': 'application/json' }
+  })
+  .then(() => {
+    document.getElementById('hireFormFields').style.display = 'none';
+    document.getElementById('hireSuccessMessage').style.display = 'block';
+
+    this.reset();
+  })
+  .catch(() => {
+    alert('Error sending request. Please try again.');
+  });
+});
+
+function resetHireForm() {
+  hireForm.reset();
+  document.getElementById('hireSuccessMessage').style.display = 'none';
+  document.getElementById('hireFormFields').style.display = 'block';
+}
+</script>
+
+
+
+
+
+  <!-- Footer -->
+  <footer class="bg-black text-white text-center p-4">
+    <div class="container">
+      <p class="mb-0">&copy; 2026 sherif rajeh. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Scroll Animation Script -->
+  <script>
+    const animateElements = document.querySelectorAll('.animate-on-scroll');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+    animateElements.forEach((element) => observer.observe(element));
+  
+
+
+    
+  </script>
+
+     
+</body>
+
+
+</html>
+

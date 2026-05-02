@@ -706,7 +706,8 @@
   </div>
 </section>
 
-<!-- Projects Section --><section id="projects" class="bg-dark">
+<!-- Projects Section -->
+<section id="projects" class="bg-dark">
   <div class="container">
 
     <h2 class="section-title text-center">Projects</h2>
@@ -745,21 +746,15 @@
           </p>
 
           <div class="mt-3 d-flex flex-column gap-3">
-
-            <a href="./sherif.rar"
-               download="Sherif_Network_Project.rar"
-               class="btn btn-warning glow">
+            <a href="./sherif.rar" download="Sherif_Network_Project.rar" class="btn btn-warning glow">
               <i class="bi bi-download me-2"></i>
               Download Packet Tracer File
             </a>
 
-            <a href="./sherif.pdf"
-               download="Sherif_Network_Report.pdf"
-               class="btn btn-outline-warning glow">
+            <a href="./sherif.pdf" download="Sherif_Network_Report.pdf" class="btn btn-outline-warning glow">
               <i class="bi bi-file-earmark-pdf me-2"></i>
               Download Project Report 
             </a>
-
           </div>
 
         </div>
@@ -795,27 +790,21 @@
           </p>
 
           <div class="mt-3 d-flex flex-column gap-3">
-
-            <a href="./nat.rar"
-               download="NAT_Network_Project.rar"
-               class="btn btn-warning glow">
+            <a href="./nat.rar" download="NAT_Network_Project.rar" class="btn btn-warning glow">
               <i class="bi bi-download me-2"></i>
               Download Packet Tracer File
             </a>
 
-            <a href="./nat.docx"
-               download="NAT_Network_Report.docx"
-               class="btn btn-outline-warning glow">
+            <a href="./nat.docx" download="NAT_Network_Report.docx" class="btn btn-outline-warning glow">
               <i class="bi bi-file-earmark-word me-2"></i>
               Download Project Report 
             </a>
-
           </div>
 
         </div>
       </div>
 
-      <!-- ================= PROJECT 3 (VPN IPSEC) ================= -->
+      <!-- ================= PROJECT 3 ================= -->
       <div class="col-lg-6 col-md-8">
         <div class="card p-4 animate-on-scroll h-100">
 
@@ -843,26 +832,71 @@
           </p>
 
           <div class="mt-3 d-flex flex-column gap-3">
-
-            <a href="./vpn.rar"
-               download="VPN_Project.rar"
-               class="btn btn-warning glow">
+            <a href="./vpn.rar" download="VPN_Project.rar" class="btn btn-warning glow">
               <i class="bi bi-shield-lock me-2"></i>
-               Download Packet Tracer File
-            </a>
-
-            <a href="./vpn.pdf"
-               download="NAT_Network_Report.docx"
-               class="btn btn-outline-warning glow">
-              <i class="bi bi-file-earmark-pdf me-2"></i>
-              Download Project Report 
+              Download Packet Tracer File
             </a>
           </div>
 
         </div>
       </div>
 
-      <!-- ================= PROJECT 4 (IPv6 EIGRP) ================= -->
+
+      <!-- ================= PROJECT GRE VPN ================= -->
+      <div class="col-lg-6 col-md-8">
+       <div class="card p-4 animate-on-scroll h-100">
+
+        <img src="gre.jpg"
+         alt="GRE Tunnel topology between two routers showing encapsulated traffic and routing protocols"
+         class="img-fluid rounded mb-4"
+         style="border: 2px solid #e0b100;">
+
+        <h3 class="card-title">GRE Tunnel VPN Implementation</h3>
+
+       <p class="card-text">
+        Designed and implemented a GRE (Generic Routing Encapsulation) tunnel between two remote networks to enable secure logical connectivity and support dynamic routing protocols across different sites.
+       </p>
+
+       <ul class="text-light opacity-75">
+       <li>Configured GRE tunnel interfaces between routers</li>
+        <li>Assigned tunnel source and destination IP addresses</li>
+       <li>Enabled encapsulation of multicast and broadcast traffic</li>
+       <li>Implemented dynamic routing (OSPF/EIGRP) over GRE tunnel</li>
+       <li>Established end-to-end connectivity between remote LANs</li>
+       <li>Verified tunnel status and routing tables</li>
+       <li>Tested network reachability using ping and traceroute</li>
+     </ul>
+
+      <p class="text-light opacity-75">
+       GRE allows transport of routing protocols and multicast traffic, unlike traditional VPNs.
+       It is commonly combined with IPsec to provide encryption and secure data transmission in real-world enterprise networks.
+      </p>
+
+      <p class="text-light opacity-75">
+       Tools: Cisco Packet Tracer.
+      </p>
+
+      <div class="mt-3 d-flex flex-column gap-3">
+        <a href="./gre.rar"
+         download="GRE_Tunnel_Project.rar"
+         class="btn btn-warning glow">
+         <i class="bi bi-diagram-3 me-2"></i>
+         Download Packet Tracer File
+       </a>
+     </div>
+
+     </div>
+     </div>
+
+
+
+
+
+
+
+
+
+      <!-- ================= PROJECT 4 ================= -->
       <div class="col-lg-6 col-md-8">
         <div class="card p-4 animate-on-scroll h-100">
 
@@ -890,20 +924,16 @@
           </p>
 
           <div class="mt-3 d-flex flex-column gap-3">
-
-            <a href="./ipv6.rar"
-               download="IPv6_EIGRP_Project.rar"
-               class="btn btn-warning glow">
+            <a href="./ipv6.rar" download="IPv6_EIGRP_Project.rar" class="btn btn-warning glow">
               <i class="bi bi-diagram-3 me-2"></i>
-               Download Packet Tracer File
+              Download Packet Tracer File
             </a>
-
           </div>
 
         </div>
       </div>
 
-      <!-- ================= PROJECT 5 (VOIP) ================= -->
+      <!-- ================= PROJECT 5 ================= -->
       <div class="col-lg-6 col-md-8">
         <div class="card p-4 animate-on-scroll h-100">
 
@@ -923,10 +953,9 @@
             <li>Implemented CME on Cisco router</li>
             <li>Created separate VLANs for Voice and Data</li>
             <li>Configured Router-on-a-Stick for inter-VLAN routing</li>
-            <li>Set up DHCP with Option 150 for IP Phone provisioning</li>
+            <li>Set up DHCP with Option 150</li>
             <li>Configured dial peers and extensions</li>
-            <li>Connected IP Phones with PCs through switch ports (voice VLAN + access VLAN)</li>
-            <li>Enabled internal voice communication between endpoints</li>
+            <li>Enabled internal voice communication</li>
           </ul>
 
           <p class="text-light opacity-75">
@@ -934,14 +963,110 @@
           </p>
 
           <div class="mt-3 d-flex flex-column gap-3">
-
-            <a href="./voip.rar"
-               download="VoIP_Project.rar"
-               class="btn btn-warning glow">
+            <a href="./voip.rar" download="VoIP_Project.rar" class="btn btn-warning glow">
               <i class="bi bi-telephone me-2"></i>
-               Download Packet Tracer File
+              Download Packet Tracer File
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ================= PROJECT 6(MULTI NETWORK PACKET TRACER FILE) ================= -->
+      <div class="col-lg-6 col-md-8">
+      <div class="card p-4 animate-on-scroll h-100">
+
+        <img src="aaa.jpg"
+         alt="Multi Network Cisco Packet Tracer topology with WLC, AAA Server and Controller networks"
+         class="img-fluid rounded mb-4"
+         style="border: 2px solid #e0b100;">
+
+      <h3 class="card-title">Multi-Network Enterprise Design ( AAA + Controller)</h3>
+
+      <p class="card-text">
+       Enterprise multi-network lab  AAA authentication, and centralized network control in a fully isolated design.
+     </p>
+
+     <ul class="text-light opacity-75">
+    
+
+      <li><strong>Network 1:</strong> AAA Security Services Network</li>
+      <li>Configured TACACS+ and RADIUS Authentication Server</li>
+      <li>User authentication and device access control policies implemented</li>
+      <li>Secure login validation for network devices</li>
+
+      <li><strong>Network 2:</strong> Controller / Management Network</li>
+      <li>Dedicated management/controller infrastructure</li>
+      <li>Used for centralized control and monitoring</li>
+      <li>Separation from production and wireless environments</li>
+
+      
+     </ul>
+
+     <p class="text-light opacity-75">
+      Tools: Cisco Packet Tracer.
+     </p>
+
+     <div class="mt-3 d-flex flex-column gap-3">
+
+      <a href="./aaa.rar"
+         download="Multi_Network_Packet_Tracer_Project.rar"
+         class="btn btn-warning glow">
+        <i class="bi bi-diagram-3 me-2"></i>
+        Download Packet Tracer File
+       </a>
+
+      
+
+       </div>
+
+     </div>
+     </div>
+
+
+
+
+
+
+      <!-- ================= PROJECT 7 (NEW FIREWALL + DMZ) ================= -->
+      <div class="col-lg-6 col-md-8">
+        <div class="card p-4 animate-on-scroll h-100">
+
+          <img src="firewall.jpg"
+               alt="Cisco Firewall ASA network topology with Inside, Outside and DMZ zones"
+               class="img-fluid rounded mb-4"
+               style="border: 2px solid #e0b100;">
+
+          <h3 class="card-title">Cisco Firewall (ASA) with DMZ Network</h3>
+
+          <p class="card-text">
+            Designed and implemented a secure network architecture using Cisco ASA Firewall with Inside, Outside, and DMZ zones.
+          </p>
+
+          <ul class="text-light opacity-75">
+            <li>Configured Cisco ASA firewall interfaces (Inside / Outside / DMZ)</li>
+            <li>Implemented security levels and zone-based policies</li>
+            <li>Created NAT rules for public access to DMZ servers</li>
+            <li>Configured ACLs for traffic filtering between zones</li>
+            <li>Hosted Web Server in DMZ zone</li>
+            <li>Protected Inside network from external access</li>
+            <li>Simulated real-world enterprise perimeter security</li>
+            <li>Verified connectivity and security restrictions</li>
+          </ul>
+
+          <p class="text-light opacity-75">
+            Tools: Cisco Packet Tracer.
+          </p>
+
+          <div class="mt-3 d-flex flex-column gap-3">
+            <a href="./firewall.rar"
+               download="Cisco_Firewall_DMZ_Project.rar"
+               class="btn btn-warning glow">
+              <i class="bi bi-shield-lock me-2"></i>
+              Download Packet Tracer File
             </a>
 
+            
           </div>
 
         </div>
